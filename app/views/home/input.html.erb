@@ -1,0 +1,12 @@
+<div class="form-io">
+    <b>Лабораторная работа №11</b>
+    <%= form_tag('/home/output', :method => 'get') do %>
+        <%= text_field_tag :txt, '', placeholder: "Введите число", class: 'textarea', id: 'input-field'%>
+        <%= submit_tag 'Найти', class: 'button', id: 'submit-but' %>
+    <% end %>
+    
+</div>
+<div class="form-buttons">
+    <%= link_to '<button class="db-button"><b>База данных</b></button>'.html_safe, serialize_path  %>
+    <%= link_to '<button class="db-button"><b>Последняя запись</b></button>'.html_safe, lastrec_path  %>
+</div>

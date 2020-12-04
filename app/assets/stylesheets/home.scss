@@ -1,0 +1,112 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {background: #f69a73}
+
+*{
+    box-sizing: border-box;
+}
+
+.form-io{
+    padding: 50px;
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    margin-top: 300px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.db-button {
+    background: white;
+    margin-top: 15px;
+    color: #f69a73;
+    font-size: 20px;
+    width: 49%;
+    border-bottom: 2px solid #d87d56;
+    border-radius: 20px;
+    height: 55px;   
+}
+
+.form-buttons{
+    width: 500px;
+    margin: auto;
+    margin-bottom: 300px;
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.textarea {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+
+.button {
+    margin-top: 20px;
+    background: #f69a73;
+    border-bottom: 4px solid #d87d56;
+    color: white;
+    font-size: 20px;
+    width: 50%;
+    border-radius: 20px;
+    height: 40px;   
+}
+
+table {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+th {
+    background: #f69a73;
+    color: white;
+    text-shadow: 0 1px 1px #2D2020;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+
+td {
+    padding: 10px 20px;
+    background: #FFFACD;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+

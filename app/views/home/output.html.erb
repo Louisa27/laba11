@@ -1,0 +1,22 @@
+<div class="form-io">
+    <% if @arr.empty? %>
+        <b>Ошибка ввода</b><br>
+    <%else%>
+        <b>Результат</b>
+        <table>
+            <tr>
+                <th>Индекс</th>
+                <th>Число</th>
+                <th>Квадрат</th>
+            </tr>
+            <% @arr.each_with_index do |num, index| %>
+                <tr>
+                    <td><%= index+1 %></td>
+                    <td><%= num %></td>
+                    <td><%= num**2 %></td>
+                </tr>
+            <% end %>
+        </table>
+    <%end%>
+    <%= link_to '<button class="button">Назад</button>'.html_safe, input_path  %>
+</div>
