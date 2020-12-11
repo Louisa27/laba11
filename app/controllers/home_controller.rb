@@ -1,22 +1,25 @@
 class HomeController < ApplicationController
+  before_action :check_params, only: %(output)
+
   def input; end
 
   def output
-    @arr = []
-    @arr = Result.check_res(params[:txt]) if check_params(params[:txt])
+    @result = Result.create_or_get_by_request(@request)
   end
 
   def serialize_db
-    render xml: Result.parse_db.to_xml
+    render xml: Result.all.to_xml
   end
 
   def last_rec
-    render xml: Result.parse_db.last.to_xml
+    render xml: Result.last.to_xml
   end
 
   protected
 
-  def check_params(str)
-    !str.empty? && str.split.length == 1 && str.to_i.to_s == str
+  def check_params
+    @request = Integer(params[:txt], exception: false)
+    @error = 'Введено не число' if @request.nil?
+    render :output unless @error.nil?
   end
 end

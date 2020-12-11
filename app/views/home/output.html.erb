@@ -1,5 +1,5 @@
 <div class="form-io">
-    <% if @arr.empty? %>
+    <% if @result.nil? %>
         <b>Ошибка ввода</b><br>
     <%else%>
         <b>Результат</b>
@@ -9,7 +9,7 @@
                 <th>Число</th>
                 <th>Квадрат</th>
             </tr>
-            <% @arr.each_with_index do |num, index| %>
+            <% @result.response.each_with_index do |num, index| %>
                 <tr>
                     <td><%= index+1 %></td>
                     <td><%= num %></td>
