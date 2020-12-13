@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   def last_rec
-    render xml: Result.last.to_xml
+    render xml: (res = Result.last).nil? ? ["База данных пуста"].to_xml : res.to_xml
   end
 
   protected

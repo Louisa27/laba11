@@ -11,9 +11,7 @@ class Result < ApplicationRecord
 
         def create_or_get_by_request(request)
             return (res = find_by(request: data)) unless res.nil?
-            result = create(request: request, response: Result.compute(request))
-            result.save if result.valid?
-            result
+            create(request: request, response: Result.compute(request))
         end
     end
 
